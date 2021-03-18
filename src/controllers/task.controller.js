@@ -3,8 +3,8 @@ const errorConfig = require('../../config/error.config'),
         taskSchema = require('../schemas/task.schema');
 
 class TaskController {
+    
     create = async (req, res, next) => {
-        console.log(req.body)
         try {
             const taskData = {
                 owner: ObjectId(res.locals.userId),
